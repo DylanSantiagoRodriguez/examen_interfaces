@@ -7,7 +7,7 @@ export default function Home() {
     <main className="flex min-h-screen items-center justify-center bg-purple-200 p-4" style={{ backgroundColor: "#F0EBFA" }}>
       <article className="max-w-[368px] overflow-hidden rounded-2xl bg-white shadow-xl" style={{ boxShadow: "0 10px 25px rgba(0, 0, 0, 0.3)" }}>
         <header className="relative">
-          <div className="absolute inset-0 rounded-t-2xl" style={{ background: "linear-gradient(to left, #A38FEB, rgba(24, 24, 24, 0.9))" }}></div>
+          <div className="absolute inset-0 rounded-t-2xl" style={{ background: "linear-gradient(to left,rgb(181, 166, 237), rgba(24, 24, 24, 0.9))" }}></div>
           
           <figure className="relative pt-10 pb-6 px-8">
             <Image src={shoeImage} alt="Nike Running Shoe" width={300} height={200} className="relative z-10 mx-auto" />
