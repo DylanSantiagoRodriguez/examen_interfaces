@@ -1,53 +1,52 @@
 import { Heart } from "lucide-react";
 import Image from "next/image";
+import shoeImage from "./shoe.png";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen items-center justify-center bg-purple-100 p-4">
-      <div className="max-w-[368px] overflow-hidden rounded-2xl bg-white shadow-lg">
-        <div className="relative">
-          {/* Fondo degradado */}
-          <div className="absolute inset-0 bg-gradient-to-br from-purple-400 to-purple-600 rounded-t-2xl"></div>
+    <main className="flex min-h-screen items-center justify-center bg-purple-200 p-4" style={{ backgroundColor: "#F0EBFA" }}>
+      <article className="max-w-[368px] overflow-hidden rounded-2xl bg-white shadow-xl" style={{ boxShadow: "0 10px 25px rgba(0, 0, 0, 0.3)" }}>
+        <header className="relative">
+          <div className="absolute inset-0 rounded-t-2xl" style={{ background: "linear-gradient(to left, #A38FEB, rgba(24, 24, 24, 0.9))" }}></div>
+          
+          <figure className="relative pt-10 pb-6 px-8">
+            <Image src={shoeImage} alt="Nike Running Shoe" width={300} height={200} className="relative z-10 mx-auto" />
+          </figure>
 
-          {/* Imagen del zapato */}
-          <div className="relative pt-10 pb-6 px-8">
-            <Image src="/shoe.png" alt="Nike Running Shoe" width={300} height={200} className="relative z-10 mx-auto" />
-          </div>
-
-          {/* Botón de favorito */}
-          <button className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full bg-purple-500/30 text-white backdrop-blur-sm transition hover:bg-purple-500/50 z-10">
+          <button className="absolute right-4 top-4 flex h-10 w-10 items-center justify-center rounded-full text-white backdrop-blur-sm transition z-10 hover:bg-opacity-50" style={{ backgroundColor: "rgba(88, 77, 128, 0.3)" }}>
             <Heart className="h-5 w-5" />
           </button>
-        </div>
+        </header>
 
-        {/* Información del producto - ahora con z-index y margin negativo para superponerse */}
-        <div className="rounded-2xl bg-white p-6 relative z-20 -mt-6 shadow-lg">
+        <section className="rounded-2xl bg-white p-6 relative z-20 -mt-6 shadow-lg">
           <h2 className="text-xl font-semibold text-gray-800">Nike Running Shoe</h2>
 
-          <div className="mt-2 flex gap-2">
-            <span className="inline-block rounded border border-gray-300 px-2 py-1 text-xs text-gray-700">EU38</span>
-            <span className="inline-block rounded border border-gray-300 px-2 py-1 text-xs text-gray-700">
+          <ul className="mt-2 flex gap-2">
+            <li className="inline-block rounded border border-gray-300 px-2 py-1 text-xs text-gray-700">EU38</li>
+            <li className="inline-block rounded border border-gray-300 px-2 py-1 text-xs text-gray-700">
               BLACK/WHITE
-            </span>
-          </div>
+            </li>
+          </ul>
 
           <p className="mt-4 text-sm text-gray-600">
             Crossing hardwood comfort with off-court flair. &apos;80s-inspired construction, bold details and
             nothin&apos;-but-net style.
           </p>
 
-          <div className="mt-6 flex items-center justify-between">
+          <footer className="mt-6 flex items-center justify-between">
             <div>
               <p className="text-xs text-gray-500">PRICE</p>
               <p className="text-xl font-semibold text-gray-800">$69.99</p>
             </div>
 
-            <button className="rounded bg-purple-600 px-6 py-2 text-sm font-medium text-white transition hover:bg-purple-700">
+            <button 
+              className="rounded-xl px-8 py-3 text-base font-medium text-white transition hover:opacity-90" 
+              style={{ backgroundColor: "#4F4075" }}>
               Add to cart
             </button>
-          </div>
-        </div>
-      </div>
+          </footer>
+        </section>
+      </article>
     </main>
   )
 }
